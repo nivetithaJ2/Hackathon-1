@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Advisory Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <h1 class="app-title">Clima Vista</h1>
+  </div>
+
+  <!-- Side popup menu -->
+  <div id="menuBox" class="menu-box">
+    <ul>
+      <li>🌦 Weather Report</li>
+      <li>👤 Your Profile</li>
+    </ul>
+  </div>
+
+  <!-- Centered main content -->
+  <div class="main-content">
+    <h2>Welcome Weather Advisory</h2>
+  </div>
+
+  <script>
+    // Toggle the menu box visibility
+    function toggleMenu() {
+      document.getElementById("menuBox").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
+*\------------------\*
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Mild blue background */
+body {
+  background: linear-gradient(to right, #b3e5fc, #e3f2fd);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar section */
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #2196f3;
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.app-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Popup menu styling */
+.menu-box {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 180px;
+  padding: 10px;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.menu-box ul {
+  list-style: none;
+}
+
+.menu-box li {
+  padding: 10px;
+  color: #2196f3;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.menu-box li:hover {
+  background-color: #e3f2fd;
+}
+
+/* Show the popup when toggled */
+.menu-box.show {
+  display: block;
+}
+
+/* Centered content */
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content h2 {
+  background-color: white;
+  padding: 30px 60px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  color: #2196f3;
+  font-size: 28px;
+  text-align: center;
+}
