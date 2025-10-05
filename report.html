@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Report & Advisory</title>
+  <link rel="stylesheet" href="report.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Weather Report & Farming Advisory</h1>
+
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Enter city name" />
+      <button onclick="showWeatherReport()">Get Report</button>
+    </div>
+
+    <div class="report-section" id="reportSection">
+      <h2>City: --</h2>
+      <p><strong>Temperature:</strong> -- °C</p>
+      <p><strong>Humidity:</strong> -- %</p>
+      <p><strong>Condition:</strong> --</p>
+
+      <div class="advisory">
+        <strong>Weather Advisory:</strong>
+        <p>--</p>
+      </div>
+
+      <div class="crops">
+        <strong>Recommended Crops:</strong>
+        <ul>
+          <li>--</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="report.js"></script>
+</body>
+</html>
+
+
+
+
